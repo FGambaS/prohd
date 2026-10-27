@@ -662,11 +662,11 @@ const SEDES=[
   {n:'Valledupar',tot:2,ent:0,sig:2,txt:'Aún sin entrega de propuesta. Los dos profesores están en SIGIIP.'}
 ];
 const COMP=[
- {n:'Jhon Edwin Acuña Gutiérrez',s:'Bogotá',now:'Notas de prensa y de LinkedIn, análisis interpretativo y primera versión de la infografía.',next:'Artículo e infografía final.',adv:'Fuentes sistematizadas en una matriz y artículo en redacción.'},
- {n:'Camilo Esteban Caicedo Sánchez',s:'Bogotá',now:'Una nota de prensa y una de LinkedIn, categorías cualitativas, borrador del instrumento y del artículo, y primera versión de la infografía.',next:'Aval ético, pilotaje y aplicación.',adv:'Segunda retroalimentación hecha y primera etapa en curso.'},
- {n:'Fabián Andrés Gamba Sánchez',s:'Bogotá',now:'Nota de prensa, nota de LinkedIn y versión preliminar del tablero, al 23 de noviembre.',next:'Modelo multinomial, artículo y análisis interpretativo.',adv:'Matriz de equivalencia y caracterización de Colombia hechas; versión de pruebas del tablero.'},
- {n:'Claudia Isabel Mejía Guayara',s:'Bogotá',now:'Notas de prensa y de LinkedIn, y primeras versiones de la infografía y del análisis interpretativo.',next:'Observación ampliada hasta 2027-1, artículo e infografía final.',adv:'Primera etapa en curso.'},
- {n:'Pereira: Toro, Granada y Villabona',s:'Proyecto conjunto',now:'Una nota de prensa y una de LinkedIn. Los demás compromisos están por reportar.',next:'Por reportar.',adv:'Proyecto sobre la incorporación de la IA en la docencia universitaria, retroalimentado.'}
+ {n:'Jhon Edwin Acuña Gutiérrez',s:'Bogotá',t:'Predicción algorítmica y temporalidad en la IA',now:'Notas de prensa y de LinkedIn, análisis interpretativo y primera versión de la infografía.',next:'Artículo e infografía final.',adv:'Fuentes sistematizadas en una matriz y artículo en redacción.'},
+ {n:'Camilo Esteban Caicedo Sánchez',s:'Bogotá',t:'Dependencia de la IA generativa en universitarios',now:'Una nota de prensa y una de LinkedIn, categorías cualitativas, borrador del instrumento y del artículo, y primera versión de la infografía.',next:'Aval ético, pilotaje y aplicación.',adv:'Segunda retroalimentación hecha y primera etapa en curso.'},
+ {n:'Fabián Andrés Gamba Sánchez',s:'Bogotá',t:'No conexión digital en encuestas de Colombia, México y Brasil',now:'Nota de prensa, nota de LinkedIn y versión preliminar del tablero, al 23 de noviembre.',next:'Modelo multinomial, artículo y análisis interpretativo.',adv:'Matriz de equivalencia y caracterización de Colombia hechas; versión de pruebas del tablero.'},
+ {n:'Claudia Isabel Mejía Guayara',s:'Bogotá',t:'Ciberactivismo en memes y carruseles de Instagram',now:'Notas de prensa y de LinkedIn, y primeras versiones de la infografía y del análisis interpretativo.',next:'Observación ampliada hasta 2027-1, artículo e infografía final.',adv:'Primera etapa en curso.'},
+ {n:'Toro, Granada y Villabona',s:'Pereira',t:'Tendencias de uso educativo de las Nuevas Tecnologías de la información y la comunicación TIC en la Universidad durante el período 2022 - 2026', now:'Una nota de prensa y una de LinkedIn. Los demás compromisos están por reportar.',adv:'A espera de los ajustes'}
 ];
 let cambioBuilt=false;
 function playCambio(){
@@ -683,6 +683,7 @@ function playCambio(){
   if(!cambioBuilt){
     $('#compromisos').innerHTML=COMP.map((c,i)=>'<details class="com"'+(i===0?' open':'')+'><summary>'+c.n+'</summary><div class="body">'
       +'<p><span class="tag">'+c.s+'</span></p>'
+      +'<p><b>Proyecto.</b> <i>'+c.t+'</i></p>'
       +'<p><b>Avance.</b> '+c.adv+'</p><p><b>Entrega en 2026-2.</b> '+c.now+'</p><p><b>Pasa a 2027.</b> '+c.next+'</p></div></details>').join('');
     cambioBuilt=true;
   }
